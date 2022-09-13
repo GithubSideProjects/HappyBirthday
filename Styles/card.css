@@ -179,4 +179,7 @@ body {
         scale: .5;
         transform: translateX(50%);
     }
+    .dad{
+	--font-size: 1.6rem;
+	}
   }
