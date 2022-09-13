@@ -1,0 +1,38 @@
+:root{
+    --dark-glow: hsl(117, 100%, 70%);
+    --light-glow: hsl(117, 100%, 90%);
+    --inner-glow: hsl(117, 100%, 60%);
+}
+
+body{
+    background-color: #333;
+    color: #ddd;
+
+    /* For Transition Stuff */
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.card-link{
+    display: flex;
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+
+    color: var(--text-color);
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px var(--inner-glow), 0 0 20px var(--inner-glow), 0 0 30px var(--dark-glow), 0 0 40px var(--dark-glow), 0 0 50px var(--dark-glow);
+    }
+    
+    to {
+        text-shadow: 0 0 20px var(--inner-glow), 0 0 30px var(--light-glow), 0 0 40px var(--light-glow), 0 0 50px var(--light-glow), 0 0 60px var(--light-glow);
+    }
+}

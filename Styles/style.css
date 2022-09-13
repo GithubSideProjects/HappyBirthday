@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    --text-color: hsl(117, 100%, 35%);
+
+    --bg-color: hsl(195, 100%, 50%);
+    --bg-color-hover: hsl(195, 100%, 45%);
+}
+
+.happy-bday-text{
+    font-size: 5rem;
+}
+
+.card-links{
+    width: 80vw;
+    aspect-ratio: 1 / 0.125;
+    background-color: var(--bg-color);
+    border-radius: 1.5rem;
+    transition: all .5s;
+
+    display: flex;
+
+    box-shadow: 1px 5px 23px 19px rgba(0,0,0,0.13);
+    -webkit-box-shadow: 1px 5px 23px 19px rgba(0,0,0,0.13);
+    -moz-box-shadow: 1px 5px 23px 19px rgba(0,0,0,0.13);
+}
+
+.card-links:hover{
+    background-color: var(--bg-color-hover);
+    border-radius: .5rem;
+}
+
+.link{
+    cursor: pointer;
+}
